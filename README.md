@@ -1,54 +1,54 @@
-QuayeWorks AeroNet Multi-Drone Control & Monitoring Application
+**QuayeWorks AeroNet Multi-Drone Control & Monitoring Application**
 
-Streamlined Multi-Drone Management
+**Streamlined Multi-Drone Management**
 
 Take your drone missions to new heights with AeroNet, the compact and efficient Python-based ground station application designed specifically for the QuayeWorks Hawk-H7 drone fleet. AeroNet utilizes an optimized binary Bluetooth protocol to provide real-time telemetry, mapping, and advanced coordination capabilities for up to five drones simultaneously—perfect for synchronized operations, research missions, and collaborative heavy-lift tasks.
 
-Key Features & Benefits:
+**Key Features & Benefits:**
 
-Efficient Binary Communication:
+**Efficient Binary Communication:**
 
 - Low-bandwidth binary protocol maximizes Bluetooth efficiency, ensuring stable and rapid data exchange.
 
 - Minimal latency and reliable telemetry transfer.
 
-Real-Time GPS Tracking & Mapping:
+**Real-Time GPS Tracking & Mapping:**
 
 - Live mapping interface displaying drone positions, routes, and operational boundaries.
 
 - Real-time drone-to-drone distance calculation critical for collaborative tasks.
 
-Comprehensive Telemetry Dashboard:
+**Comprehensive Telemetry Dashboard:**
 
 - Live display of sensor data including IMU, barometer, magnetometer, battery voltage, and current usage.
 
 - CPU load monitoring to ensure drones operate within optimal performance parameters.
 
-Flexible Parameter Tuning:
+**Flexible Parameter Tuning:**
 
 - Real-time adjustments to PID settings, flight parameters, and sensor calibrations.
 
 - Store and load customizable tuning profiles for various operational scenarios.
 
-Enhanced Safety & Alerts:
+**Enhanced Safety & Alerts:**
 
 - Immediate alerts for low battery levels, potential collisions, and geofence breaches.
 
 - Emergency commands available including return-to-home or landing procedures.
 
-Robust Logging & Replay Capability:
+**Robust Logging & Replay Capability:**
 
 - Complete logging of telemetry data for post-flight analysis and diagnostics.
 
 - Replay flight sessions to visualize drone behavior and system performance.
 
-Expandable and Intuitive Interface:
+**Expandable and Intuitive Interface:**
 
 - Clearly organized, user-friendly interface supporting up to five drones simultaneously.
 
 - Designed for seamless use by hobbyists, researchers, and industrial drone operators alike.
 
-Technical Specifications:
+**Technical Specifications:**
 
 - Connectivity: Bluetooth (HC-05) with optimized binary communication protocol
 
@@ -60,7 +60,7 @@ Technical Specifications:
 
 - GUI Framework: Python-based, compatible with Windows, optionally Linux/macOS
 
-Ideal Applications:
+**Ideal Applications:**
 
 - Multi-Drone Cooperative Operations
 
