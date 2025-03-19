@@ -1,0 +1,121 @@
+Request for Software Development (Bandwidth-Optimized)
+
+Project: Multi-Drone Control & Monitoring Application (Binary Protocol)
+
+Objective:
+Develop a feature-rich PC application (preferably in Python) that connects via Bluetooth to multiple QuayeWorks Hawk-H7-based drones. The goal is to minimize Bluetooth bandwidth usage by employing a compact binary protocol for telemetry and control data. This application should facilitate real-time telemetry monitoring, GPS mapping, multi-drone distance calculations, parameter tuning, and (optionally) basic mission planning for collaborative flight scenarios—while prioritizing efficient data transfer.
+
+1. Scope & Features
+Multi-Drone Bluetooth Connectivity
+
+The application must handle simultaneous connections (up to five drones), each mapped to a unique COM port or serial device on the PC.
+A user-friendly interface to label and manage each drone connection (e.g., “Drone A,” “Drone B,” etc.).
+Emphasis on minimal bandwidth: standard baud rate or custom optimization to ensure stable, low-latency data exchange.
+Binary Protocol for Reduced Overhead
+
+Replace plain-text/JSON telemetry with a compact binary format (e.g., fixed-size packets or TLV structures).
+Firmware and PC software must define and adhere to the same packet structure (for GPS data, sensor readings, CPU load, etc.).
+Include data integrity measures (checksums, CRC) without significantly increasing packet size.
+GPS Position Tracking & Mapping
+
+Store GPS coordinates in binary format (e.g., 32-bit floats or scaled integers).
+Display each drone’s position on a map (via embedded web-based maps or an offline library such as Folium).
+Compute distances between drones in real time for collaborative/heavy-lift missions.
+Sensor Telemetry Dashboard
+
+Show minimal but essential sensor data: IMU, barometer, magnetometer, current, voltage, CPU load, etc.
+Provide real-time updates in a graph or numeric display with the smallest necessary data packets.
+Calibration & Parameter Tuning
+
+Adjust flight parameters (PID gains, thresholds) via binary configuration messages to each drone.
+Save/load multiple tuning profiles.
+Include a fallback or sanity checks for corrupted or incomplete packets.
+Multi-Drone Coordination
+
+Calculate real-time distances between drones.
+Optionally alert when drones approach or exceed predefined distance thresholds.
+Mission & Waypoint Features (Optional/Future)
+
+If included, maintain a binary-based command structure for uploading waypoints or flight paths.
+Provide feedback when drones accept or complete each waypoint.
+Logging & Replay
+
+Save incoming binary telemetry streams to a file (with a timestamp) for post-flight analysis.
+Reconstruct data offline and convert to readable formats if needed (CSV or partial JSON).
+Safety & Alerts
+
+Minimal but crucial alerts for low battery, proximity warnings, or geofence breaches.
+Possibly broadcast an emergency landing or “Return to Home” command to any or all drones.
+User Interface & Experience
+
+A lean interface that prevents bandwidth overuse—don’t request high-frequency data beyond what is strictly necessary.
+Provide a manual rate-limit or refresh interval setting (e.g., “Update sensor data every 500ms”).
+2. Technical Requirements
+Language & Framework
+
+Python 3, with recommended libraries:
+pyserial (for the underlying Bluetooth serial connections).
+A lightweight GUI framework (PyQt / PySide / Tkinter / PySimpleGUI).
+A mapping solution (Folium or embedded map) that doesn’t excessively burden system resources.
+Binary Data Format
+
+Define a custom packet structure (e.g., a header with packet ID, length, CRC; followed by payload).
+Pack numeric fields (e.g., 16-bit or 32-bit integers/floats) carefully to handle GPS, sensor data, etc.
+Rely on CRC or checksums to detect corrupted data while keeping overhead minimal.
+Threading or Async Handling
+
+Must handle multiple serial ports concurrently.
+The UI should remain responsive, updating data only as packets arrive rather than continuously querying.
+System Requirements
+
+Runs on Windows 10 or later with a Bluetooth adapter.
+Cross-platform deployment (Linux/macOS) is a bonus.
+Scalability & Extensibility
+
+Support up to five drones; code should be adaptable for more drones with minimal modifications.
+Structured to allow future expansions (e.g., new sensor types or commands) without re-engineering the entire protocol.
+3. Deliverables
+Source Code & Documentation
+
+A Python codebase with well-commented modules.
+Detailed specification of the binary protocol (field sizes, packet types, CRC method).
+User Guide
+
+Clear instructions for pairing each drone via Bluetooth, setting up serial ports, and configuring minimal bandwidth usage (e.g., refresh rates).
+Release Package
+
+Optionally, a bundled desktop application (e.g., PyInstaller-based) for non-technical operators.
+Example Logs & Testing Tools
+
+Sample logs in the chosen binary format, along with a parsing script for validation.
+Basic test harness or simulator to inject pseudo-telemetry data for debugging.
+4. Proposed Timeline & Milestones
+Week 1–2: Protocol & Architecture Design
+
+Define binary packet structures, error-checking approach, and GUI mockups.
+Align with firmware constraints.
+Week 3–5: Core Communication & Telemetry
+
+Implement multi-threaded serial reading with binary parsing.
+Display minimal telemetry in a dashboard.
+Week 6–7: Mapping & Distance Calculations
+
+Integrate map component.
+Compute and display distances between drones.
+Week 8–9: Parameter Tuning & Optional Features
+
+Add GUI for flight parameter adjustment (PID, offsets, thresholds).
+Implement logging and replay.
+Week 10: Testing, Optimization & Documentation
+
+Field tests to ensure stable connections under bandwidth constraints.
+Final refinements, packaging, and user documentation.
+(Schedule is tentative and may adjust based on developer availability or scope changes.)
+
+5. Additional Notes
+Firmware Coordination: The drone’s firmware must be updated or designed to send/receive data in the agreed-upon binary format—particularly important for sending reduced-size telemetry.
+Refresh Rate Tuning: Provide an option to adjust data rates to match real flight needs while remaining within Bluetooth’s bandwidth constraints.
+Security: If needed, consider minimal overhead encryption or authentication, though that may affect CPU usage and packet size.
+Offline/Peer-to-Peer: For multi-drone collisions or heavy-lift missions, ensure each drone’s data is reliably received in near-real time. If range or reliability is a concern, consider a fallback or emergency protocol.
+Conclusion
+We seek an efficient, bandwidth-conscious PC application for real-time multi-drone control and monitoring. By implementing a binary protocol with minimal overhead, the software should reliably handle simultaneous Bluetooth links, display telemetry data, support parameter tuning, and compute drone-to-drone distances—all while respecting strict bandwidth and performance considerations. Your proposal detailing development methodology, experience with binary data protocols, and UI design approach would be greatly appreciated.
