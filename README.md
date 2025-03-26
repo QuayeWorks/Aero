@@ -54,6 +54,7 @@ Take your drone missions to new heights with AeroNet, the compact and efficient 
 - Location Tracking for 3-Axis Gimbal Control: Enable precise tracking and dynamic adjustments for YAW, Pitch, and ROLL, ensuring optimal target framing and enhanced operational flexibility.
 
 - Enhanced Operational Insight: Integrate visual data seamlessly with drone telemetry to support autonomous tracking and collaborative tasks.
+  
 **Technical Specifications:**
 
 - Connectivity: Bluetooth (HC-05) with optimized binary communication protocol
