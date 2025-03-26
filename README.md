@@ -47,14 +47,6 @@ Take your drone missions to new heights with AeroNet, the compact and efficient 
 - Clearly organized, user-friendly interface supporting up to five drones simultaneously.
 
 - Designed for seamless use by hobbyists, researchers, and industrial drone operators alike.
-
-**Advanced Vision Integration with HuskyLens AI Camera:**
-
-- Object Recognition & Vectorization: Harness the power of the HuskyLens camera for real-time, AI-driven object recognition and vectorization.
-
-- Location Tracking for 3-Axis Gimbal Control: Enable precise tracking and dynamic adjustments for YAW, Pitch, and ROLL, ensuring optimal target framing and enhanced operational flexibility.
-
-- Enhanced Operational Insight: Integrate visual data seamlessly with drone telemetry to support autonomous tracking and collaborative tasks.
   
 **Technical Specifications:**
 
