@@ -1,4 +1,4 @@
-**QuayeWorks AeroNet Multi-Drone Control & Monitoring Application**
+**QuayeWorks Aero Drone Setup & Control Application**
 
 **Streamlined Multi-Drone Management**
 
