@@ -2,13 +2,13 @@
 
 **QuayeWorks AERO is an offline-first ground-control, aircraft-configuration, navigation, logging, and simulation platform built for the QuayeWorks Hawk-H7 drone system.**
 
-> **Development status:** Phases A, B, and C are implemented and owner-approved. Phase D, the Simulation Lab, is currently in development.
+> **Development status:** Phase D is currently in development.
 
 ## What AERO Is
 
 QuayeWorks AERO began as a small multi-drone telemetry concept called AeroNet. It has since grown into a native QuayeWorks aerospace application centered on one complete aircraft workflow: configure the flight controller, monitor the aircraft, plan missions offline, validate safety conditions, preserve configuration history, and test future behavior in simulation before it reaches real hardware.
 
-AERO is **not** merely a renamed Betaflight Configurator and is no longer defined as a Python Bluetooth dashboard. The current application uses a native **Tauri/Rust + Vue/TypeScript** architecture, communicates with the `QUAYEWORKS_HAWK_H7` flight controller through MSP, and keeps required Betaflight compatibility behind a QuayeWorks-owned interface and product design.
+AERO uses a native **Tauri/Rust + Vue/TypeScript** architecture, communicates with the `QUAYEWORKS_HAWK_H7` flight controller through MSP, and keeps required Betaflight compatibility behind a QuayeWorks-owned interface and product design.
 
 The normal application is designed to operate without cloud services, remote map servers, analytics, CDNs, or mandatory internet access.
 
